@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 import Navbar from "@/components/navbar/navbar";
 import Link from "next/link";
-import Footer from "../footer/footer";
 const Homepage = () => {
 
 
@@ -174,9 +173,10 @@ const Homepage = () => {
       </section> */}
 
       {/* Footer Section */}
-      
-  <Footer/>
-      
+      <footer className="py-6 relative z-10 text-black
+        ">
+  
+      </footer>
     </div>
   );
 }

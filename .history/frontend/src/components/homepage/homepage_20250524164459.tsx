@@ -174,9 +174,10 @@ const Homepage = () => {
       </section> */}
 
       {/* Footer Section */}
-      
-  <Footer/>
-      
+      <footer className="py-6 relative z-10 text-black
+        ">
+  <Footer</Footer>
+      </footer>
     </div>
   );
 }
