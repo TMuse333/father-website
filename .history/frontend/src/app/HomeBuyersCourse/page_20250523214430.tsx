@@ -1,0 +1,14 @@
+"use client"
+
+
+const Page = () => {
+
+
+    return (
+        <>
+        <div className="text-white">
+            hello
+        </div>
+        </>
+    )
+}
