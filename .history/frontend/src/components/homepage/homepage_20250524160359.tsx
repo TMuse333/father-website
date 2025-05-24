@@ -14,12 +14,15 @@ const Homepage = () => {
 
   const socialMedia = [
     {
-        name: "Facebook",
-        url: "https://www.facebook.com/Musial.Chris/",
-        image: "/facebook.png",
-      },
-
-
+      name: "YouTube",
+      url: "https://www.youtube.com/@ChrisMusialMarketingDirector",
+      image: "/YouTube.png",
+    },
+    {
+      name: "Facebook",
+      url: "https://www.facebook.com/Musial.Chris/",
+      image: "/facebook.png",
+    },
     {
       name: "Instagram",
       url: "https://www.instagram.com/chris_musial_real_estate/",
@@ -30,11 +33,6 @@ const Homepage = () => {
       url: "https://www.linkedin.com/in/musialchris/?originalSubdomain=ca",
       image: "/linkedin-logo.png",
     },
-    {
-        name: "YouTube",
-        url: "https://www.youtube.com/@ChrisMusialMarketingDirector",
-        image: "/YouTube.png",
-      },
   ];
 
   return (
@@ -44,10 +42,9 @@ const Homepage = () => {
         src="/portrait.png"
         alt="Cityscape Background"
         fill
-        className="object-cover z-0 object-[50%_100%]
-        sm:object-[0_120%] md:object-[0_100%]"
+        className="object-cover z-0"
         priority
-        // style={{ objectPosition: "0 100%" }}
+        style={{ objectPosition: "0 100%" }}
       />
 
       {/* Header Section */}
