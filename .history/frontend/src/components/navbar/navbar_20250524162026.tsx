@@ -52,7 +52,7 @@ const Navbar: React.FC<NavbarProps> = ({ excludedLink }) => {
             isMenuOpen ? "flex" : "hidden"
           } md:flex flex-col md:flex-row md:justify-around md:space-x-4 space-y-2 md:space-y-0 py-2 md:py-0 transition-all duration-300 ease-in-out
           
-          `}
+          md:text-sm`}
         >
           {filteredNavItems.map((item) => (
             <Link
@@ -67,8 +67,8 @@ const Navbar: React.FC<NavbarProps> = ({ excludedLink }) => {
               }}
               onClick={() => setIsMenuOpen(false)}
             >
-              <p className="text-sm  ">
-              {item.name.toUpperCase()}
+              <p>
+
               </p>
 
             </Link>

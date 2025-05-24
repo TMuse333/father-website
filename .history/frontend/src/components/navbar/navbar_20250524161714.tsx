@@ -50,16 +50,14 @@ const Navbar: React.FC<NavbarProps> = ({ excludedLink }) => {
         <div
           className={`${
             isMenuOpen ? "flex" : "hidden"
-          } md:flex flex-col md:flex-row md:justify-around md:space-x-4 space-y-2 md:space-y-0 py-2 md:py-0 transition-all duration-300 ease-in-out
-          
-          `}
+          } md:flex flex-col md:flex-row md:justify-around md:space-x-4 space-y-2 md:space-y-0 py-2 md:py-0 transition-all duration-300 ease-in-out`}
         >
           {filteredNavItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className="px-4 py-2 rounded hover:scale-[1.15] text-center transition-all
-             "
+              "
               style={{
                 backgroundImage: "url('/button-bg.png')",
                 backgroundSize: "cover",
@@ -67,10 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ excludedLink }) => {
               }}
               onClick={() => setIsMenuOpen(false)}
             >
-              <p className="text-sm  ">
               {item.name.toUpperCase()}
-              </p>
-
             </Link>
           ))}
         </div>

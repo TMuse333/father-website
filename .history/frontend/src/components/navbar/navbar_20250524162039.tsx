@@ -67,7 +67,7 @@ const Navbar: React.FC<NavbarProps> = ({ excludedLink }) => {
               }}
               onClick={() => setIsMenuOpen(false)}
             >
-              <p className="text-sm  ">
+              <p className="md:text-lg">
               {item.name.toUpperCase()}
               </p>
 
