@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 import Homepage from "@/components/homepage/homepage";
 
-export const metadata: Metadata = {
+xport const metadata: Metadata = {
   title: "Chris Musial | Halifax Real Estate Agent",
   description:
     "Chris Musial is a dedicated RE/MAX Nova real estate agent in Halifax, Nova Scotia, offering personalized services for buying, selling, and investing in properties.",

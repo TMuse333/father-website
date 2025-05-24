@@ -1,8 +1,8 @@
-
+"use client"
 
 import DownloadPage from "@/components/downloadPage/downloadPage"
 
-
+```typescript
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     icon: ["/favicon.ico?v=4"],
   },
 };
-
+```
 
 const Page = () => {
 

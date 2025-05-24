@@ -1,7 +1,7 @@
-
+"use client"
 
 import DownloadPage from "@/components/downloadPage/downloadPage"
-
+```typescript
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

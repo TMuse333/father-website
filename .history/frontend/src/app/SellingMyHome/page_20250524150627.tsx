@@ -1,4 +1,4 @@
-
+"use client"
 
 import DownloadPage from "@/components/downloadPage/downloadPage"
 import { Metadata } from "next";
