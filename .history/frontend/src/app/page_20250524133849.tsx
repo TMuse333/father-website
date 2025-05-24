@@ -1,16 +1,18 @@
 "use client";
 
 import Image from "next/image";
-
+import { useState } from "react";
 
 import { motion } from "framer-motion";
-
+import button from '../../public/button-bg.png'
 import Navbar from "@/components/navbar/navbar";
 import Link from "next/link";
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-
-
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const socialMedia = [
     {
