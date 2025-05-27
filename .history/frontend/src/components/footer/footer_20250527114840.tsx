@@ -39,14 +39,14 @@ const socialMedia = [
         
         ">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
-        <div className="flex space-x-4 mb-2 mt-auto">
+        <div className="flex space-x-4 mb-2">
             {socialMedia.map((platform) => (
               <a
                 key={platform.name}
                 href={platform.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-[1.1] transition-all mt-auto"
+                className="hover:scale-[1.1] transition-all"
               >
                 <Image
                   src={platform.image}

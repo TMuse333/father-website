@@ -24,8 +24,7 @@ const Homepage = () => {
         alt="Cityscape Background"
         fill
         className="object-cover z-0 object-[50%_100%]
-        sm:object-[0_120%] md:object-[0_100%]
-        absolute h-full w-full"
+        sm:object-[0_120%] md:object-[0_100%]"
         priority
         // style={{ objectPosition: "0 100%" }}
       />

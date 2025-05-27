@@ -36,7 +36,7 @@ const socialMedia = [
 
     return (
         <footer className="py-6  z-10 text-black
-        
+        bg-re
         ">
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
         <div className="flex space-x-4 mb-2 mt-auto">

@@ -46,7 +46,7 @@ const socialMedia = [
                 href={platform.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-[1.1] transition-all mt-auto"
+                className="hover:scale-[1.1] transition-all"
               >
                 <Image
                   src={platform.image}

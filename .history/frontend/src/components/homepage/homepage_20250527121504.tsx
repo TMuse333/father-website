@@ -16,16 +16,14 @@ const Homepage = () => {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 text-black flex flex-col relative
-    w-screen">
+    <div className="min-h-screen bg-gray-100 text-black flex flex-col relative">
       {/* Background Image */}
       <Image
         src="/portrait.png"
         alt="Cityscape Background"
         fill
         className="object-cover z-0 object-[50%_100%]
-        sm:object-[0_120%] md:object-[0_100%]
-        absolute h-full w-full"
+        sm:object-[0_120%] md:object-[0_100%]"
         priority
         // style={{ objectPosition: "0 100%" }}
       />

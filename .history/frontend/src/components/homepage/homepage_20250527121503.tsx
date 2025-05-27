@@ -16,16 +16,14 @@ const Homepage = () => {
 
 
   return (
-    <div className="min-h-screen bg-gray-100 text-black flex flex-col relative
-    w-screen">
+    <div className="min-h-screen bg-gray-100 text-black flex flex-col relative">
       {/* Background Image */}
       <Image
         src="/portrait.png"
         alt="Cityscape Background"
         fill
         className="object-cover z-0 object-[50%_100%]
-        sm:object-[0_120%] md:object-[0_100%]
-        absolute h-full w-full"
+        sm:object-[0_120%] md:object-[0_100%]"
         priority
         // style={{ objectPosition: "0 100%" }}
       />
@@ -86,7 +84,7 @@ const Homepage = () => {
       
 
       {/* Brochure Section */}
-      <section className="py-12 px-0 relative z-10 flex-1">
+      <section className="py-12 px-0 relative z-10 flex-12">
       {/* <h2 className="text-3xl font-bold text-black mb-8 pl-4 md:pl-8">Resources</h2> */}
       <div className="flex flex-col gap-6 w-full md:w-48 ml-0 pl-4 md:pl-8">
         {[
