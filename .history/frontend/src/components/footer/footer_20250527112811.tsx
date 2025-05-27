@@ -54,7 +54,7 @@ const socialMedia = [
                   height={32}
                  
                   className={` transition-transform duration-300 object-contain ${
-                    platform.name === "instagam" ? "w-[100px] h-[100px]  hover:scale-[2.5]" : "w-[30px] hover:scale-110 h-[75px]"
+                    platform.name === "instagam" ? "w-[100px] h-[100px] scale-[2] hover:scale-[2.5]" : "w-[30px] hover:scale-110 h-[75px]"
                   }`}
                 />
               </a>

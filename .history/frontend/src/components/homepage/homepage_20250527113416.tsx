@@ -97,7 +97,7 @@ const Homepage = () => {
         ].map((item, index) => (
           <motion.div
             key={item.alt}
-            className="relative w-48 h-48 max-w-[120px]
+            className="relative w-48 h-48 max-w-[100px]
             hover:scale-[1.1] transition-transform"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
