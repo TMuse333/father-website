@@ -86,73 +86,59 @@ const Homepage = () => {
       
 
       {/* Brochure Section */}
-      <section className="py-12 px-0 relative z-10 flex-1">
-      {/* <h2 className="text-3xl font-bold text-black mb-8 pl-4 md:pl-8">Resources</h2> */}
-      <div className="flex flex-col gap-6 w-full md:w-48 ml-0 pl-4 md:pl-8">
-        {[
-          { src: "/home.png", alt: "Home Buyer's Course",
-        link:'/SellingMyHome' },
-          { src: "/buyer.png", alt: "Selling My Home",
-          link:'/HomeBuyersCourse' },
-          { src: "/condo.png", alt: "Selling My Condominium",
-          link:'/SellingMyCondo' },
-        ].map((item, index) => (
-          <motion.div
-            key={item.alt}
-            className="relative w-48 h-48 max-w-[120px]
-            hover:scale-[1.1] transition-transform"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.2 }}
-          >
-            <Link href={item.link}>
-
-            
+     {/* Brochure Section */}
+     <section className="py-12 px-0 relative z-10 flex-1">
+  <div className="flex flex-col md:flex-row gap-6 w-full ml-0 pl-4 md:pl-8 max-w-[1200px]
+ justify-start items-center">
+    
+    {/* Left column with images */}
+    <div className="flex flex-col gap-6">
+      {[
+        { src: "/home.png", alt: "Home Buyer's Course", link:'/SellingMyHome' },
+        { src: "/buyer.png", alt: "Selling My Home", link:'/HomeBuyersCourse' },
+        { src: "/condo.png", alt: "Selling My Condominium", link:'/SellingMyCondo' },
+      ].map((item, index) => (
+        <motion.div
+          key={item.alt}
+          className="relative w-48 h-48 max-w-[120px]
+          hover:scale-[1.1] transition-transform"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2 }}
+        >
+          <Link href={item.link}>
             <Image
               src={item.src}
               alt={item.alt}
               fill
               className="object-contain rounded-lg"
             />
-            </Link>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+          </Link>
+        </motion.div>
+      ))}
+    </div>
 
-      {/* Contact Section */}
-      {/* <section className="max-w-7xl mx-auto py-12 px-4 relative z-10">
-        <h2 className="text-3xl font-bold text-black mb-8">Contact Me</h2>
-        <p className="pr-10 w-full text-lg text-gray-700 mb-8">
-          Fill out this form with your project details, and we’ll respond promptly
-          to discuss elevating your online presence and taking your business{" "}
-          <span className="font-semibold">to the next level.</span>
-        </p>
-        <form className="max-w-lg">
-          <input
-            type="text"
-            placeholder="Your Name"
-            className="w-full p-3 mb-4 border rounded"
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full p-3 mb-4 border rounded"
-          />
-          <textarea
-            placeholder="Your Project Details"
-            className="w-full p-3 mb-4 border rounded"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-blue-600 text-white p-3 rounded hover:bg-blue-700"
-          >
-            Submit
-          </button>
-        </form>
-      </section> */}
+    {/* Right side with YouTube iframe */}
+    <div className="bg-blue-200 flex items-start justify-start">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/7xcR72XgTR4?si=NSXCk_eWkQbpS_U_"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+        className="rounded-lg shadow-lg mt-auto"
+      ></iframe>
+    </div>
 
-      {/* Footer Section */}
+  </div>
+</section>
+
+
+
+     
       
   <Footer/>
       
