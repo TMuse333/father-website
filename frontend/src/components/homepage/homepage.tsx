@@ -119,7 +119,7 @@ const Homepage = () => {
     </div>
 
     {/* Right side with YouTube iframe */}
-    <div className="bg-blue-200 flex items-start justify-start">
+    <div className=" flex items-center justify-center md:justify-start md:items-start  md:w-auto mx-auto">
       <iframe
         width="560"
         height="315"
@@ -129,7 +129,7 @@ const Homepage = () => {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
-        className="rounded-lg shadow-lg mt-auto"
+        className="rounded-lg shadow-lg mt-auto "
       ></iframe>
     </div>
 
