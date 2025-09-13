@@ -17,7 +17,7 @@ const Homepage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 text-black flex flex-col relative
-    w-screen">
+    w-screen overflow-x-hidden">
       {/* Background Image */}
       <Image
         src="/portrait.png"
@@ -124,16 +124,14 @@ const Homepage = () => {
       <h3 className="text-center font-semibold text-xl
       sm:text-2xl md:text-3xl mb-4">Homebuyers Video Course</h3>
       <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/7xcR72XgTR4?si=NSXCk_eWkQbpS_U_"
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerPolicy="strict-origin-when-cross-origin"
-        allowFullScreen
-        className="rounded-lg shadow-lg mt-auto "
-      ></iframe>
+  src="https://www.youtube.com/embed/7xcR72XgTR4?si=NSXCk_eXCk_eWkQbpS_U_"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen
+  className="w-[90vw] h-[60.5vw] max-w-[500px] max-h-[315px] rounded-lg shadow-lg mt-auto"
+/>
     </div>
 
   </div>
