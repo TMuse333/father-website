@@ -122,7 +122,7 @@ const Homepage = () => {
     <div className=" flex flex-col items-center justify-center md:justify-start md:items-start  md:w-auto mx-auto
     md:-translate-x-[8rem] ">
       <h3 className="text-center font-semibold text-xl
-      sm:text-2xl md:text-3xl mb-4">First-time Homebuyers video</h3>
+      sm:text-2xl md:text-3xl mb-4">Homebuyers Video Course</h3>
       <iframe
         width="560"
         height="315"
