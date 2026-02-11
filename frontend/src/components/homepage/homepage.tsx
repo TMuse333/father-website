@@ -1,23 +1,22 @@
 "use client";
 
 import Image from "next/image";
-
-
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import Navbar from "@/components/navbar/navbar";
 import Link from "next/link";
 import Footer from "../footer/footer";
+import AboutModal from "../aboutModal/aboutModal";
+
 const Homepage = () => {
-
-
-
-
-
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-100 text-black flex flex-col relative
-    w-screen overflow-x-hidden">
+    <div
+      className="min-h-screen bg-gray-100 text-black flex flex-col relative
+    w-screen overflow-x-hidden"
+    >
       {/* Background Image */}
       <Image
         src="/portrait.png"
@@ -37,7 +36,7 @@ const Homepage = () => {
             src="/father-header.webp"
             alt="Chris Musial Realtor"
             fill
-            className="object-contain 
+            className="object-contain
             mx-auto"
             priority
           />
@@ -47,26 +46,28 @@ const Homepage = () => {
             Chris Musial
             <br/>REALTOR
           </h1> */}
-        
-          {/* <Image 
+
+          {/* <Image
           width={600}
           height={1300}
           src="/signature.png"
           alt='Chris musial signature'
-          className="object-cover 
+          className="object-cover
           w-[40vw] max-w-[200px] mx-auto
-          
+
          "
           />
           </div> */}
-           
-        
         </div>
-        <div className="w-screen mx-auto flex flex-col sm:flex-row justify-between items-center bg-white shadow
-       bg-blue-200">
-          <div className="flex flex-col
+        <div
+          className="w-screen mx-auto flex flex-col sm:flex-row justify-between items-center bg-white shadow
+       bg-blue-200"
+        >
+          <div
+            className="flex flex-col
           py-2  bg-blue-100 md:flex-row justify-between items-center w-full px-4 text-center
-          max-w-[2000px]">
+          max-w-[2000px]"
+          >
             <div className="flex flex-col md:flex-row text-xs md:text-sm md:w-1/2 justify-around mb-4 md:mb-0">
               <p>Chris Musial, B.A, REALTOR®</p>
               <p className="text-gray-600">RE/MAX NOVA</p>
@@ -80,71 +81,72 @@ const Homepage = () => {
       </header>
 
       {/* Navigation Section */}
-     <Navbar
-     excludedLink="Home"
-     />
-      
+      <Navbar excludedLink="Home" onAboutClick={() => setIsAboutOpen(true)} />
 
       {/* Brochure Section */}
-     {/* Brochure Section */}
-     <section className="py-12 px-0 relative z-10 flex-1">
-  <div className="flex flex-col md:flex-row gap-6 w-full ml-0 pl-4 md:pl-8 max-w-[1200px]
- justify-start items-center">
-    
-    {/* Left column with images */}
-    <div className="flex flex-col gap-6">
-      {[
-        { src: "/home.png", alt: "Home Buyer's Course", link:'/SellingMyHome' },
-        { src: "/buyer.png", alt: "Selling My Home", link:'/HomeBuyersCourse' },
-        { src: "/condo.png", alt: "Selling My Condominium", link:'/SellingMyCondo' },
-      ].map((item, index) => (
-        <motion.div
-          key={item.alt}
-          className="relative w-48 h-48 max-w-[120px]
-          hover:scale-[1.1] transition-transform"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.2 }}
+      {/* Brochure Section */}
+      <section className="py-12 px-0 relative z-10 flex-1">
+        <div
+          className="flex flex-col md:flex-row gap-6 w-full ml-0 pl-4 md:pl-8 max-w-[1200px]
+ justify-start items-center"
         >
-          <Link href={item.link}>
-            <Image
-              src={item.src}
-              alt={item.alt}
-              fill
-              className="object-contain rounded-lg"
+          {/* Left column with images */}
+          <div className="flex flex-col gap-6">
+            {[
+              { src: "/home.png", alt: "Home Buyer's Course", link: "/SellingMyHome" },
+              { src: "/buyer.png", alt: "Selling My Home", link: "/HomeBuyersCourse" },
+              { src: "/condo.png", alt: "Selling My Condominium", link: "/SellingMyCondo" },
+            ].map((item, index) => (
+              <motion.div
+                key={item.alt}
+                className="relative w-48 h-48 max-w-[120px]
+          hover:scale-[1.1] transition-transform"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                <Link href={item.link}>
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-contain rounded-lg"
+                  />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Right side with YouTube iframe */}
+          <div
+            className=" flex flex-col items-center justify-center md:justify-start md:items-start  md:w-auto mx-auto
+    md:-translate-x-[8rem] "
+          >
+            <h3
+              className="text-center font-semibold text-xl
+      sm:text-2xl md:text-3xl mb-4"
+            >
+              Homebuyers Video Course
+            </h3>
+            <iframe
+              src="https://www.youtube.com/embed/7xcR72XgTR4?si=NSXCk_eXCk_eWkQbpS_U_"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="w-[90vw] h-[60.5vw] max-w-[500px] max-h-[315px] rounded-lg shadow-lg mt-auto"
             />
-          </Link>
-        </motion.div>
-      ))}
-    </div>
+          </div>
+        </div>
+      </section>
 
-    {/* Right side with YouTube iframe */}
-    <div className=" flex flex-col items-center justify-center md:justify-start md:items-start  md:w-auto mx-auto
-    md:-translate-x-[8rem] ">
-      <h3 className="text-center font-semibold text-xl
-      sm:text-2xl md:text-3xl mb-4">Homebuyers Video Course</h3>
-      <iframe
-  src="https://www.youtube.com/embed/7xcR72XgTR4?si=NSXCk_eXCk_eWkQbpS_U_"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  referrerPolicy="strict-origin-when-cross-origin"
-  allowFullScreen
-  className="w-[90vw] h-[60.5vw] max-w-[500px] max-h-[315px] rounded-lg shadow-lg mt-auto"
-/>
-    </div>
+      <Footer />
 
-  </div>
-</section>
-
-
-
-     
-      
-  <Footer/>
-      
+      {/* About Modal */}
+      <AboutModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
     </div>
   );
-}
+};
 
-export default Homepage
+export default Homepage;
